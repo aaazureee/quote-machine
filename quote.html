@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Quote Machine</title>
+
+    <!-- Bootstrap core CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
+
+    <!-- Custom styles for this template -->
+    <link href="narrow-jumbotron.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=BioRhyme" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-latest.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</head>
+
+<body>
+    <script>
+        $(document).ready(function() {
+            $("#quote").click(function(e) {
+
+                e.preventDefault();
+                $.ajax({
+                    url: "http://quotesondesign.com/wp-json/posts?filter%5Borderby%5D=rand&filter%5Bposts_per_page%5D=1&callback=",
+                    success: function(data) {
+                        var post = data.shift(); // The data is an array of posts. Grab the first one.
+                        $("#content").html(post.content);
+                        $("#author").html("<em> - " + post.title + "</em>");
+                    },
+                    cache: false
+                });
+            });
+        });
+
+    </script>
+
+    <div class="container">
+        <div class="header clearfix">
+            <nav>
+                <ul class="nav nav-pills float-right">
+                    <li class="headerFix">
+                        <a class="nav-link" href="https://twitter.com/4headlul">
+                            <img src="https://maxcdn.icons8.com/Color/PNG/48/Social_Networks/twitter-48.png" title="Twitter" width="48" height="48" alt="Twitter">
+                        </a>
+                    </li>
+                    <li class="headerFix">
+                        <a class="nav-link" href="https://github.com/aaazureee">
+                            <img src="https://image.flaticon.com/icons/svg/25/25231.svg" title="GitHub Filled" width="48" height="48" alt="Github">
+                        </a>
+                    </li>
+                </ul>
+                <h3 class="text-muted">Quote Machine</h3>
+            </nav>
+
+        </div>
+
+        <div class="quote">
+            <h3 class="text-center">Get some quotes</h3>
+            <br>
+        </div>
+
+        <div class="text-center"><button id="quote" class="btn btn-primary btn-lg">Quote</button></div>
+        <br>
+        <div id="content">
+
+        </div>
+        <div id="author"></div>
+
+
+
+
+
+    </div>
+    <!-- /container -->
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+
+</body>
+
+</html>
