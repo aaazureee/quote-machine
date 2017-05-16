@@ -36,10 +36,16 @@ body {
 /* Custom page footer */
 
 .footer {
-    padding-top: 1rem;
     color: #777;
     border-top: .05rem solid #e5e5e5;
-    margin-top: 18rem;
+    margin-top: 10rem;
+    bottom: 0;
+    width: 100%;
+    height: 5px;
+}
+
+.test {
+    text-align:center;
 }
 
 
