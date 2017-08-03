@@ -19,7 +19,7 @@ body {
 /* Custom page header */
 
 .header {
-    padding-bottom: 1rem;
+    padding-bottom: 10px;
     border-bottom: .05rem solid #e5e5e5;
 }
 
@@ -33,19 +33,37 @@ body {
 }
 
 
-/* Custom page footer */
+/* Custom page footer 
 
 .footer {
     color: #777;
     border-top: .05rem solid #e5e5e5;
-    margin-top: 10rem;
+    margin-top: 12rem;
     bottom: 0;
     width: 100%;
-    height: 5px;
+    height: 0px;
+    line-height: 50px;
+}
+*/
+
+.footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    line-height: 0px;
+    text-align: center;
+}
+
+a,
+a:focus,
+a:hover,
+a:visited,
+a:active {
+    text-decoration: none;
 }
 
 .test {
-    text-align:center;
+    text-align: center;
 }
 
 
@@ -61,51 +79,6 @@ body {
     margin: 2rem 0;
 }
 
-
-/* Main marketing message and sign up button */
-
-.jumbotron {
-    text-align: center;
-    border-bottom: .05rem solid #e5e5e5;
-}
-
-.jumbotron .btn {
-    padding: .75rem 1.5rem;
-    font-size: 1.5rem;
-}
-
-
-/* Supporting marketing content */
-
-.marketing {
-    margin: 3rem 0;
-}
-
-.marketing p+h4 {
-    margin-top: 1.5rem;
-}
-
-
-/* Responsive: Portrait tablets and up */
-
-@media screen and (min-width: 48em) {
-    /* Remove the padding we set earlier */
-    .header,
-    .marketing,
-    .footer {
-        padding-right: 0;
-        padding-left: 0;
-    }
-    /* Space out the masthead */
-    .header {
-        margin-bottom: 2rem;
-    }
-    /* Remove the bottom border on the jumbotron for visual effect */
-    .jumbotron {
-        border-bottom: 0;
-    }
-}
-
 .headerFix {
     margin-top: -7px;
     margin-left: -18px;
@@ -113,9 +86,8 @@ body {
 
 .quote {
     font-family: 'BioRhyme', serif;
+    margin-top: 10px;
 }
-
-.footer {}
 
 button {
     cursor: pointer;
