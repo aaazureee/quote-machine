@@ -1,8 +1,25 @@
+html {
+	position: relative;
+	min-height: 100%;
+}
+
+
 /* Space out content a bit */
 
 body {
-    padding-top: 1.5rem;
-    padding-bottom: 1.5rem;
+	/* Margin bottom by footer height */
+	margin-bottom: 20px;
+	padding-top: 1.5rem;
+	padding-bottom: 1.5rem;
+}
+
+.footer {
+	position: absolute;
+	bottom: 0;
+	width: 100%;
+	height: 20px;
+	text-align: center;
+	line-height: 0px;
 }
 
 
@@ -11,25 +28,25 @@ body {
 .header,
 .marketing,
 .footer {
-    padding-right: 1rem;
-    padding-left: 1rem;
+	padding-right: 1rem;
+	padding-left: 1rem;
 }
 
 
 /* Custom page header */
 
 .header {
-    padding-bottom: 10px;
-    border-bottom: .05rem solid #e5e5e5;
+	padding-bottom: 10px;
+	border-bottom: .05rem solid #e5e5e5;
 }
 
 
 /* Make the masthead heading the same height as the navigation */
 
 .header h3 {
-    margin-top: 0;
-    margin-bottom: 0;
-    line-height: 3rem;
+	margin-top: 0;
+	margin-bottom: 0;
+	line-height: 3rem;
 }
 
 
@@ -46,49 +63,41 @@ body {
 }
 */
 
-.footer {
-    position: absolute;
-    bottom: 0;
-    width: 100%;
-    line-height: 0px;
-    text-align: center;
-}
-
 a,
 a:focus,
 a:hover,
 a:visited,
 a:active {
-    text-decoration: none;
+	text-decoration: none;
 }
 
 .test {
-    text-align: center;
+	text-align: center;
 }
 
 
 /* Customize container */
 
 @media (min-width: 48em) {
-    .container {
-        max-width: 46rem;
-    }
+	.container {
+		max-width: 46rem;
+	}
 }
 
 .container-narrow>hr {
-    margin: 2rem 0;
+	margin: 2rem 0;
 }
 
 .headerFix {
-    margin-top: -7px;
-    margin-left: -18px;
+	margin-top: -7px;
+	margin-left: -18px;
 }
 
 .quote {
-    font-family: 'BioRhyme', serif;
-    margin-top: 10px;
+	font-family: 'BioRhyme', serif;
+	margin-top: 10px;
 }
 
 button {
-    cursor: pointer;
+	cursor: pointer;
 }
